@@ -16,7 +16,7 @@ function stringVerify(value) {
 const createBlog = async function (req, res) {
   try {
     let data = req.body
-    let { title, body, authorId, tags, category, subcategory } = data
+    let { title, body, authorId, category } = data
 
     if (Object.keys(data).length == 0) {
       return res.status(400).send({ status: false, msg: "Please provide all the required data" });
